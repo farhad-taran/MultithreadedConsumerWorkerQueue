@@ -1,0 +1,17 @@
+Multithreading vs. Probability
+There is a pool of N threads. When the program starts, each thread is given a list of X messages to deliver. Recipient of each message is chosen randomly amongst the threads in the pool when the message is handed off to a thread.
+Each thread is supposed to deliver all of its messages by passing them to another thread that is randomly chosen amongst all thread in the pool (including the current thread and the actual recipient). When a thread receives a message that is addressed to another thread, it should dispatch it further.
+Write a multithreaded program that for a given integer N (1 through 1000) and integer X (1 through 1000) will simulate delivery of all messages and output:
+•	How many times it took a message on average to get to the designated recipient (three decimal points precision)
+•	Histogram of message dispatches, consisting of two, tab-separated columns: number of dispatches and a number of messages that got dispatched this many times
+Input:
+10 100
+Output:
+13.435
+1	4
+2	7
+3	20
+…	…
+
+Along with your code attach results for N=64 and X=256.
+
